@@ -12,7 +12,7 @@ After you run deff.sh file, it will produce *.csv files corresponding to the cry
 ### TAKRIJ-2dmap.csv
 Column 1 is deff value in pm/V, Coulmn 2 is theta value and Column 3 is phi value
 ### TAKRIJ-result
-omega 1064 2omega 532.0 \
+omega 1064 2omega 532.0 
 
 1.585116 1.611625 1.687287 1.601634 1.628612 1.712148
 Max 135.0 317.0 0.127683535317773
