@@ -15,6 +15,9 @@ Column 1 is deff value in pm/V, Coulmn 2 is theta value and Column 3 is phi valu
 omega 1064 2omega 532.0 
 
 1.585116 1.611625 1.687287 1.601634 1.628612 1.712148
+
 Max 135.0 317.0 0.127683535317773
+
 Min 45.0 137.0 -0.127683535317773
+
 True
