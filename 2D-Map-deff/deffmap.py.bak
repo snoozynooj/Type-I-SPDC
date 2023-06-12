@@ -1,0 +1,327 @@
+import numpy as np
+import math as mt
+import sympy as sym
+import matplotlib.pyplot as plt
+from numpy import *
+from numpy import genfromtxt
+from matplotlib import pyplot as plt
+from fractions import Fraction as F
+from scipy.optimize import leastsq
+import scipy as sc
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import sympy as sym
+import csv
+########################################################
+############################################################################################
+my_data1 = genfromtxt('FILE.csv', delimiter='')
+f=my_data1[:,3] # Third column of this file is de deff in PV/m
+
+def Deff_NU(f,g1,phi1):
+    import sympy as sym
+    X=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[0]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        X[0,i]=X2[i]
+        X[1,i]=X3[i]
+        X[2,i]=X4[i]
+
+    Y=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[1]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        Y[0,i]=X2[i]
+        Y[1,i]=X3[i]
+        Y[2,i]=X4[i]
+
+    Z=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[2]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        Z[0,i]=X2[i]
+        Z[1,i]=X3[i]
+        Z[2,i]=X4[i]
+
+    T=[X,Y,Z]
+    T1=array(T)
+
+    θ, ϕ = sym.symbols('θ ϕ')
+    a=[ sym.sin(ϕ),-sym.cos(ϕ) , 0 ]
+    b=[ -sym.cos(θ)*sym.cos(ϕ) ,-sym.cos(θ)*sym.sin(ϕ) , sym.sin(θ) ]
+
+    result=0
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                #print(i,j,k)
+                #print(T1[i,j,k]*Ew[j]*E2w[k]*Ew[i])
+                result += a[i]*T1[i,j,k]*b[j]*b[k]
+#negative
+#                result += b[i]*T1[i,j,k]*a[j]*a[k]
+
+    θ, ϕ = sym.symbols('θ ϕ')
+
+    result1=result.subs(θ,radians(g1))
+
+    D=[]
+    I=[]
+    val = (abs(result1.subs((ϕ),radians(phi1))))
+    val1 = ((result1.subs((ϕ),radians(phi1))))
+    return val,val1
+
+##################################
+def Deff_NU1(f,g1,phi1):
+    import sympy as sym
+    X=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[0]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        X[0,i]=X2[i]
+        X[1,i]=X3[i]
+        X[2,i]=X4[i]
+
+    Y=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[1]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        Y[0,i]=X2[i]
+        Y[1,i]=X3[i]
+        Y[2,i]=X4[i]
+
+    Z=np.zeros((3,3))
+    m=np.split(f,3)
+    X1=m[2]
+    n=np.split(X1,3)
+    X2=n[0]
+    X3=n[1]
+    X4=n[2]
+    for i in range(0,3):
+        Z[0,i]=X2[i]
+        Z[1,i]=X3[i]
+        Z[2,i]=X4[i]
+
+    T=[X,Y,Z]
+    T1=array(T)
+
+    θ, ϕ = sym.symbols('θ ϕ')
+    a=[ sym.sin(ϕ),-sym.cos(ϕ) , 0 ]
+    b=[ -sym.cos(θ)*sym.cos(ϕ) ,-sym.cos(θ)*sym.sin(ϕ) , sym.sin(θ) ]
+
+    result=0
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                #print(i,j,k)
+                #print(T1[i,j,k]*Ew[j]*E2w[k]*Ew[i])
+#                result += a[i]*T1[i,j,k]*b[j]*b[k]
+#negative
+                result += b[i]*T1[i,j,k]*a[j]*a[k]
+
+    θ, ϕ = sym.symbols('θ ϕ')
+
+    result1=result.subs(θ,radians(g1))
+
+    D=[]
+    I=[]
+    val = (abs(result1.subs((ϕ),radians(phi1))))
+    val1 = ((result1.subs((ϕ),radians(phi1))))
+    return val,val1
+##################################
+
+x1=sym.symbols('x1')
+c=sym.symbols('c')
+my_data =  genfromtxt('FILE.txt1', delimiter='')
+#def funcSell(x, A, B, C, D):
+#    return ((A)+ B/(x**2-C) - D*x**2)
+
+#def Sell(x1, A, B, C, D):
+#    return math.sqrt((A)+ B/(x1**2-C) - D*x1**2)
+
+
+def funcSell(x, A, B1, C1, B2, C2):
+    return ((A)+(((x**2)*B1)/((x**2)-C1))+(((x**2)*B2)/((x**2)-C2)))
+
+def Sell(x1, A, B1, C1, B2, C2):
+    return math.sqrt(((A)+(((x1**2)*B1)/((x1**2)-C1))+(((x1**2)*B2)/((x1**2)-C2))))
+
+
+
+def dielectric():
+    bg=bandgap
+    x=1239.84193/bg
+    y=1100
+    z=2000
+    f=my_data[:,0]
+    xx=my_data[:,1]
+    yy=my_data[:,2]
+    zz=my_data[:,3]
+
+    f1=[]
+    zz2=[]
+    xx2=[]
+    yy2=[]
+
+    if len(zz)==len(xx):
+        for i in range(0,len(f)):
+            if bg>=f[i]>=1.12713: # This limit was due to the CASTEP file, but in Crystal one can have
+                f1.append((round(1239.84193/f[i],2)))# Tranform frecuency in eV to nm wavelength
+                a=round((xx[i])**2,6)
+                b=round((yy[i])**2,6)
+                c=round((zz[i])**2,6)
+                zz2.append(c)
+                xx2.append(a)
+                yy2.append(b)
+
+    X = np.linspace(x, y, z)
+
+    constantsSell, _ = sc.optimize.curve_fit(funcSell, f1, xx2, maxfev=9999990, xtol=1e-8)
+    Y3=funcSell(X,*constantsSell)
+    constantsSell1, _ = sc.optimize.curve_fit(funcSell, f1, zz2, maxfev=9999990, xtol=1e-8)
+    Y4=funcSell(X,*constantsSell1)
+    constantsSell2, _ = sc.optimize.curve_fit(funcSell, f1, yy2, maxfev=9999990, xtol=1e-8)
+    Y4=funcSell(X,*constantsSell2)
+
+    nx = [constantsSell[0],constantsSell[1],constantsSell[2],constantsSell[3],constantsSell[4]]
+    ny = [constantsSell2[0],constantsSell2[1],constantsSell2[2],constantsSell2[3],constantsSell2[4]]
+    nz = [constantsSell1[0],constantsSell1[1],constantsSell1[2],constantsSell1[3],constantsSell1[4]]
+    return nx,ny,nz
+############################################################################################
+##############################################################################################
+nx, ny, nz =dielectric()
+omega=PUMP
+omega2=PUMP/2
+print("omega",omega,"2omega",omega2)
+#print((Sell(omega,*nx))**1,(Sell(omega,*ny))**1,(Sell(omega,*nz))**1,(Sell(omega2,*nx))**1,(Sell(omega2,*ny))**1,(Sell(omega2,*nz))**1)
+nx2 = round(Sell(omega,*nx),6)
+ny2 = round(Sell(omega,*ny),6)
+nz2 = round(Sell(omega,*nz),6)
+nx3 = round(Sell(omega2,*nx),6)
+ny3 = round(Sell(omega2,*ny),6)
+nz3 = round(Sell(omega2,*nz),6)
+#nx2 = 1.834748
+#ny2 = 1.864100
+#nz2 = 2.045937
+#nx3 = 1.876227
+#ny3 = 1.911741
+#nz3 = 2.109778
+print(nx2,ny2,nz2,nx3,ny3,nz3)
+
+a1 = 1.0 / nx2**2
+b1 = 1.0 / ny2**2
+c1 = 1.0 / nz2**2
+a2 = 1.0 / nx3**2
+b2 = 1.0 / ny3**2
+c2 = 1.0 / nz3**2
+#print(type(a1))
+if (nz2 - ny2 > ny2-nx2):
+    deff = []
+    deff1 = []
+    thetaopt = []
+    phiopt = []
+
+    for theta1 in range(181):
+        theta2 = float(theta1) / 1.0
+        theta = math.radians(theta2)
+        for phi1 in range(361):
+            phi2 = float(phi1) / 1.0
+            phi = math.radians(phi2)
+            kx = math.sin(theta) * math.cos(phi)
+            ky = math.sin(theta) * math.sin(phi)
+            kz = math.cos(theta)
+
+            b11 = -kx ** 2.0 * (b1 + c1) - ky ** 2.0 * (a1 + c1) - kz ** 2.0 * (a1 + b1)
+            c11 =  kx ** 2.0 * (b1 * c1) + ky ** 2.0 * (a1 * c1) + kz ** 2.0 * (a1 * b1)
+
+            b12 = -kx ** 2.0 * (b2 + c2) - ky ** 2.0 * (a2 + c2) - kz ** 2.0 * (a2 + b2)
+            c12 =  kx ** 2.0 * (b2 * c2) + ky ** 2.0 * (a2 * c2) + kz ** 2.0 * (a2 * b2)
+
+            lhs =  math.sqrt(2.0) / (math.sqrt(-b11 - math.sqrt(b11 ** 2.0 - 4.0 * c11)))
+#        lhs2 = 1.0 / (math.sqrt(-b11 + math.sqrt(b11 ** 2.0 - 4.0 * c11)))
+#        lhs = 0.5 * (lhs1 + lhs2)
+            rhs =  math.sqrt(2.0) / (math.sqrt(-b12 + math.sqrt(b12 ** 2.0 - 4.0 * c12)))
+            valabs , valbas1 = Deff_NU(f,theta2, phi2)
+            deff.append(valabs)
+            thetaopt.append(theta2)
+            phiopt.append(phi2)
+            deff1.append(valbas1)
+#            print(valbas,theta2,phi2)
+
+    with open("FILE-2dmap.csv", 'w') as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerows(zip(deff1,thetaopt,phiopt))
+    f.close()
+    arrdeff = np.array(deff1)
+    arrtheta = np.array(thetaopt)
+    arrphi = np.array(phiopt)
+    var=np.argmax(arrdeff)
+    var1=np.argmin(arrdeff)
+    print("Max",thetaopt[var],phiopt[var],arrdeff[var])
+    print("Min",thetaopt[var1],phiopt[var1],arrdeff[var1])
+    print(nz2 - ny2 > ny2-nx2)
+elif nz2 - ny2 < ny2-nx2:
+    deff = []
+    deff1 = []
+    thetaopt = []
+    phiopt = []
+
+    for theta1 in range(181):
+        theta2 = float(theta1) / 1.0
+        theta = math.radians(theta2)
+        for phi1 in range(361):
+            phi2 = float(phi1) / 1.0
+            phi = math.radians(phi2)
+            kx = math.sin(theta) * math.cos(phi)
+            ky = math.sin(theta) * math.sin(phi)
+            kz = math.cos(theta)
+
+            b11 = -kx ** 2.0 * (b1 + c1) - ky ** 2.0 * (a1 + c1) - kz ** 2.0 * (a1 + b1)
+            c11 =  kx ** 2.0 * (b1 * c1) + ky ** 2.0 * (a1 * c1) + kz ** 2.0 * (a1 * b1)
+
+            b12 = -kx ** 2.0 * (b2 + c2) - ky ** 2.0 * (a2 + c2) - kz ** 2.0 * (a2 + b2)
+            c12 =  kx ** 2.0 * (b2 * c2) + ky ** 2.0 * (a2 * c2) + kz ** 2.0 * (a2 * b2)
+
+            lhs =  math.sqrt(2.0) / (math.sqrt(-b11 - math.sqrt(b11 ** 2.0 - 4.0 * c11)))
+#        lhs2 = 1.0 / (math.sqrt(-b11 + math.sqrt(b11 ** 2.0 - 4.0 * c11)))
+#        lhs = 0.5 * (lhs1 + lhs2)
+            rhs =  math.sqrt(2.0) / (math.sqrt(-b12 + math.sqrt(b12 ** 2.0 - 4.0 * c12)))
+            valabs , valbas1 = Deff_NU1(f,theta2, phi2)
+            deff.append(valabs)
+            thetaopt.append(theta2)
+            phiopt.append(phi2)
+            deff1.append(valbas1)
+#            print(valbas,theta2,phi2)
+
+    with open("FILE-2dmap.csv", 'w') as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerows(zip(deff1,thetaopt,phiopt))
+    f.close()
+    arrdeff = np.array(deff1)
+    arrtheta = np.array(thetaopt)
+    arrphi = np.array(phiopt)
+    var=np.argmax(arrdeff)
+    var1=np.argmin(arrdeff)
+    print("Max",thetaopt[var],phiopt[var],arrdeff[var])
+    print("Min",thetaopt[var1],phiopt[var1],arrdeff[var1])
+    print(nz2 - ny2 > ny2-nx2)
