@@ -8,15 +8,12 @@ Column 2 : Type of crystal
 Column 3 : Band gap of the crystal
 Column 4 : Signal wavelength for SPDC
 
-After you run deff.sh file, it will produce *.csv files corresponding to the crystal. For example
+After you run deff.sh file, it will produce *.csv files corresponding to the crystal and *-result file. For example
 ### TAKRIJ-2dmap.csv
 Column 1 is deff value in pm/V, Coulmn 2 is theta value and Column 3 is phi value
-1.76799997000000e-8 0.0 0.0
-1.69511053422187e-8 0.0 1.0
-1.61875481514561e-8 0.0 2.0
-1.53909433938836e-8 0.0 3.0
-1.45629934681548e-8 0.0 4.0
-1.37054833857782e-8 0.0 5.0
-1.28202760260607e-8 0.0 6.0
-1.19093071785802e-8 0.0 7.0
-1.09745803867329e-8 0.0 8.0
+### TAKRIJ-result
+omega 1064 2omega 532.0
+1.585116 1.611625 1.687287 1.601634 1.628612 1.712148
+Max 135.0 317.0 0.127683535317773
+Min 45.0 137.0 -0.127683535317773
+True
