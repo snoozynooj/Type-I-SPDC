@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#$ -pe mpi-24 72          # Specify parallel environment and legal core size
+#$ -q long            # Specify queue
+#$ -N RATDAS01           # Specify job name
+$ -o m1o1b.out             # the produced output file
+
+module load crystal17
+
+cp test.d12 INPUT
+#export JOB=JUKVEQ02
+#export DIR=/scratch365/sanoj/Test-Espresso/Quantum/FINAL/DIPOLE/DATABASE/JUKVEQ02/CHI2/
+#export scratch=/tmp/sanoj/
+
+#mkdir -p $scratch/$JOB
+#cp $DIR/test.d12 $scratch/$JOB/INPUT
+
+#----UNCOMMENT BELOW LINE FOR RESTARTING OPTIMIZATION------------
+#cp $DIR/OPTINFO.DAT $scratch/$JOB/OPTINFO.DAT                  |
+#----------------------------------------------------------------
+
+#cd $scratch/$JOB
+
+# run the parallel version of Crystal (MPPcrystal or PCrystal)
+
+mpirun -np $NSLOTS Pcrystal 
+
+#---UNCOMMENT BELOW THREE LINES TO SAVE THE OPTIMIZATION FILES----
+#cp $scratch/$JOB/fort.33 $DIR                                   |
+#cp $scratch/$JOB/OPTINFO.DAT $DIR                               |
+#cp $scratch/$JOB/opt* $DIR                                      |
+#-----------------------------------------------------------------
+
+# remove temporary (fort.*) files
+rm *.pe*
+rm diis*
