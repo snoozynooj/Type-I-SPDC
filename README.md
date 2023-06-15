@@ -5,13 +5,10 @@ This folder is all about producing phase-matching angles, $G^{(2)}$ and photon c
 
 Description of database file: 
 - Column 1: Name of crystals
+- Column 2: Type of crystal
+- Column 3: Band gap of the crystal
+- Column 4: Signal wavelength for SPDC
 
-```diff
-- Column 1: Name of crystals + 
-! Column 2: Type of crystal
-# Column 3: Band gap of the crystal 
-@@ Column 4: Signal wavelength for SPDC@@
-```
 After you run deff.sh file, it will produce three files corresponding to the crystal. For example, if the crystal name is RATDAS01, it will produce the following files.
 
 **1: RATDAS01-Count.txt**
