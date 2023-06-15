@@ -11,19 +11,17 @@ Description of database file:
 # Column 3: Band gap of the crystal 
 @@ Column 4: Signal wavelength for SPDC@@
 ```
+After you run deff.sh file, it will produce three files corresponding to the crystal. For example, if the crystal name is RATDAS01, it will produce the following files.
+**1: RATDAS01-Count.txt  **
 
+nx(w), ny(w), nz(w), nx(2w), ny(2w), nz(2w)
 
+1.545739 1.553462 1.611269 1.564891 1.573036 1.634139
 
-After you run deff.sh file, it will produce *.csv files corresponding to the crystal and *-result file. For example
-### TAKRIJ-2dmap.csv
-Column 1 is deff value in pm/V, Coulmn 2 is theta value and Column 3 is phi value
-### TAKRIJ-result
-omega 1064 2omega 532.0 
+Optimum phase matching: 142.5 29.8 0.533167931611107
 
-1.585116 1.611625 1.687287 1.601634 1.628612 1.712148
+Crystal: Positive biaxial
 
-Max 135.0 317.0 0.127683535317773
+Photon Count: 4258840.787977502 s^-1 mW^-1 mm^-1
 
-Min 45.0 137.0 -0.127683535317773
-
-True
+Correlation time: 1.1923320604724541e-14 s
