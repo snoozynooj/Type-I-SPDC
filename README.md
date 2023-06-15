@@ -6,7 +6,7 @@ This folder is all about producing phase-matching angles, g<sub>(2)</sub> and ph
 Description of database file: 
 
 ```diff
-- Column 1: Name of crystals + text in green - 
+- Column 1: Name of crystals + 
 ! Column 2: Type of crystal
 # Column 3: Band gap of the crystal 
 @@ Column 4: Signal wavelength for SPDC@@
