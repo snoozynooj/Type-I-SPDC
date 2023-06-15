@@ -27,4 +27,4 @@ Photon Count: 4258840.787977502 s^-1 mW^-1 mm^-1
 
 Correlation time: 1.1923320604724541e-14 s
 
-**1: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and d<sub>eff</sub> at those angles. Column 1, Column 2, and Column 3 represent d<sub>eff</sub>,θ and φ  $\alpha$
+**1: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and d<sub>eff</sub> at those angles. Column 1, Column 2, and Column 3 represent d<sub>eff</sub>, $\theta$ and $\phi$  
