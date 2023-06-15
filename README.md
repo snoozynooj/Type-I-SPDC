@@ -1,7 +1,7 @@
 # Type-I-SPDC
-Different folder is for calculating different things.
+A different folder is for calculating different things.
 ## **Phase_Matching + G2 + Photon_Count** 
-This folder is all about producing phase-matching angles, g<sup>(2)</sup> and photon count. There is a file called the ***database*** which has information about all the crystals used in this study. 
+This folder is all about producing phase-matching angles, $G^{(2)}$ and photon count. There is a file called the ***database*** which has information about all the crystals used in this study. 
 
 Description of database file: 
 
@@ -27,4 +27,4 @@ Photon Count: 4258840.787977502 s^-1 mW^-1 mm^-1
 
 Correlation time: 1.1923320604724541e-14 s
 
-**1: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and d<sub>eff</sub> at those angles. Column 1, Column 2, and Column 3 represent d<sub>eff</sub>, $\theta$ and $\phi$  $d_{eff}$
+**1: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and d<sub>eff</sub> at those angles. Column 1, Column 2, and Column 3 represent $d_{eff}$, $\theta$ and $\phi$  \bold{sanoj}
