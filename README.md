@@ -27,4 +27,4 @@ Correlation time: 1.1923320604724541e-14 s
 
 **2: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and d<sub>eff</sub> at those angles. Column 1, Column 2, and Column 3 represent $d_{eff}$, $\theta$, and $\phi$. 
 
-**3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is \tau (c) and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
+**3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is $\tau$ $(s)$ and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
