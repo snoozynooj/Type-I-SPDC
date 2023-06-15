@@ -12,7 +12,8 @@ Description of database file:
 @@ Column 4: Signal wavelength for SPDC@@
 ```
 After you run deff.sh file, it will produce three files corresponding to the crystal. For example, if the crystal name is RATDAS01, it will produce the following files.
-**1: RATDAS01-Count.txt  **
+
+**1: RATDAS01-Count.txt**
 
 nx(w), ny(w), nz(w), nx(2w), ny(2w), nz(2w)
 
