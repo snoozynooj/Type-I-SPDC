@@ -3,12 +3,13 @@ Different folder is for calculating different things.
 ## **Phase_Matching + G2 + Photon_Count** 
 This folder is all about producing phase-matching angles, g<sub>(2)</sub> and photon count. There is a file called the database which has information about all the crystals used in this study. 
 
-Description of database file: *Column 1:* Name of crystals *Column 2:* Type of crystal *Column 3:* Band gap of the crystal *Column 4:* Signal wavelength for SPDC
+Description of database file: 
 
 ```diff
-- Column 1: Name of crystals + text in green - ! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- Column 1: Name of crystals + text in green - 
+! Column 2: Type of crystal
+# Column 3: Band gap of the crystal 
+@@ Column 4: Signal wavelength for SPDC@@
 ```
 
 
