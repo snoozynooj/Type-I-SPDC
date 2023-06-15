@@ -29,7 +29,7 @@ Correlation time: 1.1923320604724541e-14 s
 ![My Image](Sample_images/222-Phase-matching.png)
 
 **3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is $\tau$ $(s)$ and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
-%![My Image](Sample_images/G2.png)
 
-<img src="Sample_images/G2.png" width="300">
+
+<img src="Sample_images/G2.png" width="600">
 
