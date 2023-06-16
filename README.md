@@ -1,5 +1,5 @@
 # Type-I-SPDC
-A different folder is for calculating different things.
+Different folders are for calculating different things.
 ## **Phase-Matching + G2 + Photon-Count** 
 This folder is all about producing phase-matching angles, $G^{(2)}$ and photon count. There is a file called the ***database*** which has information about all the crystals used in this study. 
 
