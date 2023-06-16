@@ -1,0 +1,6 @@
+nx(w), ny(w), nz(w), nx(2w), ny(2w), nz(2w)
+1.738 1.747 1.833 1.779 1.791 1.889
+Optimum phase matching: 44.0 224.8 2.80522614877286
+Crystal: Positive biaxial
+Photon Count: 18123068.371115625 s^-1 mW^-1 mm^-1
+Correlation time: 2.5886497313236644e-14 s
