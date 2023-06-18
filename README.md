@@ -17,7 +17,7 @@ nx(w), ny(w), nz(w), nx(2w), ny(2w), nz(2w)
 
 1.545739 1.553462 1.611269 1.564891 1.573036 1.634139
 
-Optimum phase matching: 142.5 29.8 0.533167931611107
+Optimum phase matching ($d_{eff}$, $\theta$, and $\phi$): 142.5 29.8 0.533167931611107
 
 Crystal: Positive biaxial
 
