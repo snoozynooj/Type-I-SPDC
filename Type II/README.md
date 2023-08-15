@@ -1,5 +1,5 @@
 # Type-II-SPDC
-Different Script are for differents type of crystals and wevalenghts
+Tuning curve script give data about the outside angle of the generated photons per wavelenght, meanwhile Type II uniaxial 
 
 ## **Tuning_curves_MOFs** 
 This file use a sellmeier equation of the ordinary and extraordinary refractive indices of the crystal to calculate the value of the optical axis angle that ensure a collinear non-degenerative SPDC and the tuning curves of the crystal, this is the outside angle in which the photons are generated for each wavelenght, at a given pumped wavelenght.
