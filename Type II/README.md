@@ -8,6 +8,8 @@ Tuning curve for MOFTIL at 1546
 
 <img src="MOFTIL_1546.png" width="400">
 
+All the data is pre-set to be calculated at 773nm for the pumped wavelenght.
+
 ## **Type-II_uniaxial** 
 This file use a sellmeier equation given by
 $n^{2}(\lambda) = A + \frac{B_1\lambda^{2}}{\lambda^{2}-C_1} + \frac{B_2\lambda^{2}}{\lambda^{2}-C_2}$
