@@ -4,7 +4,7 @@ Different Script are for differents type of crystals and wevalenghts
 ## **Tuning_curves_MOFs** 
 This file use a sellmeier equation of the ordinary and extraordinary refractive indices of the crystal to calculate the value of the optical axis angle that ensure a collinear non-degenerative SPDC and the tuning curves of the crystal, this is the outside angle in which the photons are generated for each wavelenght, at a given pumped wavelenght.
 
-Tuning curve for MOFTIL at 1064
+Tuning curve for MOFTIL at 1546
 
 <img src="MOFTIL_1546.png" width="400">
 
