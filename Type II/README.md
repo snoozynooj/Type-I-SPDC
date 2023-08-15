@@ -9,7 +9,7 @@ As an output we get the following images:
 
 $d_{eff}$ v/s azimuthal angle
 
-<img src="MOFTIL_deff.png" width="400">
+<img src="MOFTIL_deff.png" width="300">
 
 
 $G^{(2)}$ as a function of the characteristic time
