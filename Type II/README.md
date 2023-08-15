@@ -7,6 +7,6 @@ to calculate the value of the optical axis angle that ensure a collinear non-deg
 
 
 
-<img src="MOFTIL_1546.png" width="600">
+<img src="MOFTIL_1546.png" width="400">
 
-<img src="MOFTIL_G2.png" width="600">
+<img src="MOFTIL_G2.png" width="400">
