@@ -1,5 +1,13 @@
 # Type-II-SPDC
 Different Script are for differents type of crystals and wevalenghts
+
+## **Tuning_curves_MOFs** 
+This file use a sellmeier equation of the ordinary and extraordinary refractive indices of the crystal to calculate the value of the optical axis angle that ensure a collinear non-degenerative SPDC and the tuning curves of the crystal, this is the outside angle in which the photons are generated for each wavelenght, at a given pumped wavelenght.
+
+Tuning curve for MOFTIL at 1064
+
+<img src="MOFTIL_1546.png" width="400">
+
 ## **Type-II_uniaxial** 
 This file use a sellmeier equation given by
 $n^{2}(\lambda) = A + \frac{B_1\lambda^{2}}{\lambda^{2}-C_1} + \frac{B_2\lambda^{2}}{\lambda^{2}-C_2}$
@@ -7,11 +15,15 @@ to calculate the value of the optical axis angle that ensure a collinear non-deg
 
 As an output we get the following images:
 
-$d_{eff}$ v/s azimuthal angle
+$d_{eff}$ v/s azimuthal angle for MOFTIL at 1064
 
 <img src="MOFIL_deff.png" width="400">
 
 
-$G^{(2)}$ as a function of the characteristic time
+$G^{(2)}$ as a function of the characteristic time for MOFTIL at 1064
 
 <img src="MOFTIL_G2.png" width="400">
+
+All the data is pre-set to be calculated at 532nm for the pumped wavelenght.
+
+
