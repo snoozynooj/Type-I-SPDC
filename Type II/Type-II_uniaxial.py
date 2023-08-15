@@ -14,10 +14,30 @@ from scipy.optimize import fsolve
 from scipy.integrate import quad
 
 
+""" Parameters"""
 
-lp = 532
-l1 = lp*2
-L = 1E-3
+eo = 8.8541878176E-12 # Electrical permittivity of the vacuum
+
+P = 1E-3 # Pumped power
+
+c=299792458 # Velocity of the light
+L = 0.001 # Lenght of the crystal
+lp = 532 # Wavelenght of the pump in nm
+lam_t = lp
+l1 = lp*2 # Wavelenght of the signal and idler in nm
+
+band = 1E-9 # Bandwidth of the Fiber
+band =  c / (band)
+
+
+sigma_p = 0.875E-6  # Hermite-Gauss mode for the pump
+sigma_1 = 1.875E-6  # Hermite-Gauss mode for the signal and idler
+
+
+#%%
+ 
+
+""" Sellmeier equations for selected MOFs"""
 
 "VURQEF"
 # selle =[1.939257624156827 ,0.0046201733565161655 ,134742.8486912627,0.33491150572064055 ,58887.39779184338]
@@ -158,10 +178,13 @@ sello = [1.6482007420228795, 0.1728575560603238, 102104.2784739305, 0.9919406829
 # selle =[2.0731 ,1.2882,5.76235328E4,1.0700E-2,1.59071640E5]
 
 
+    
+def Sell(l, A, B1, C1, B2, C2):
+    return mt.sqrt(((A)+(((l**2)*B1)/((l**2)-C1))+(((l**2)*B2)/((l**2)-C2))))
 
+#%%
+""" Second-order suceptibility tensor for selected MOFs"""
 
-# lam_p= np.linspace(600,1400,num=500)
-# lam_t = float(532)
 X2 = np.zeros((3,9))
 
 
@@ -545,33 +568,11 @@ X2[2][8]= -0.619599998
 # X2[2][7]=-0.8635E-05
 # X2[2][8]=-0.1010E-04
 
-    
-def Sell(l, A, B1, C1, B2, C2):
-    return mt.sqrt(((A)+(((l**2)*B1)/((l**2)-C1))+(((l**2)*B2)/((l**2)-C2))))
+#%%
 
 
-
-
-sigma_p = 0.875E-6
-sigma_1 = 1.875E-6
-
-P = 1E-3
-
-pi = mt.pi
-
-c=299792458
-
-
-
-l = 532
-lam_t = l
-l1 = l*2
-
-
-
-
-no = Sell(l,*sello)
-ne = Sell(l,*selle)
+no = Sell(lp,*sello) # Ordinary refracive index for the pumped wavelenght
+ne = Sell(lp,*selle) # Extraordinary refracive index for the pumped wavelenght
 
 if no > ne:
     type_ = 'negative' 
@@ -579,7 +580,7 @@ elif ne > no:
     type_ = 'positive'
      
     
-def neff(lam,ang):
+def neff(lam,ang):  # Effective refractive index
     no = Sell(lam,*sello)
     ne = Sell(lam,*selle)
     a = np.cos(ang)**2 / (no*no)
@@ -588,7 +589,7 @@ def neff(lam,ang):
     return nef
 
 
-def f(x,l_p,l_e,a_c):
+def f(x,l_p,l_e,a_c): #  Momentum conservation
     l_o = l_e*l_p/(l_e-l_p)
     if type_=='negative':
         kp = 2*mt.pi*neff(l_p,a_c)/(l_p*1E-9)
@@ -604,28 +605,33 @@ def f(x,l_p,l_e,a_c):
     return A,B
 
 
-phi = np.linspace(0,mt.pi/2,10000)
+ac = np.linspace(0,mt.pi/2,10000) # Optic axis angle
 val_1 = []
 val_=[]
 phi_ = []
-for a in range(len(phi)):
-    val = np.sum(np.abs(f([0,0],l,l1,phi[a])))
+
+
+for a in range(len(ac)):
+    val = np.sum(np.abs(f([0,0],lp,l1,ac[a])))
     val_1.append(val)
     if val<10000:
         val_.append(val)
-        phi_.append(phi[a])
+        phi_.append(ac[a])
+        
+        
 i = np.argmin(val_)
-a_c = phi_[i]
+a_c = phi_[i] # Optic axis value that minimize the momentum conservation
 
 
-phi_ = np.linspace(0,360,num=1000)
+#%%
+phi_ = np.linspace(0,360,num=1000) # Azimuthal angle
 
 res__=[]
 
-if no > ne:
-    n_p = neff(l,a_c)
-elif ne > no:
-    n_p = Sell(l,*sello)
+if type_ == 'negative':
+    n_p = neff(lp,a_c)
+elif type_ == 'positive':
+    n_p = Sell(lp,*sello)
      
 
 
@@ -705,16 +711,22 @@ for a in range(len(phi_)):
     deff.append(d_eff(phi_[a]*mt.pi/180,a_c))
     
 plt.plot(phi_,deff,"-")    
-np.savetxt('Deff_phi'+name+'.txt', phi_)
-np.savetxt('Deff_deff'+name+'.txt', deff)
-
-
+# np.savetxt('Deff_phi'+name+'.txt', phi_)
+# np.savetxt('Deff_deff'+name+'.txt', deff)
 
 plt.show()    
-i = np.argmax(np.abs(deff))
-phi_opt = phi_[i]
+
+i = np.argmax(np.abs(deff)) 
+
+phi_opt = phi_[i] # Azimuthal angle that maximize the Deff
+
 theta_opt = a_c * 180/mt.pi
-deff_m = np.max(np.abs(deff))    
+
+deff_m = np.max(np.abs(deff))  # Maximum Deff  
+
+#%%
+
+""" Calculation of the Glauber correlation function"""
 
 x=sym.symbols('x')
 def Sell2(x, A, B1, C1, B2, C2):
@@ -736,13 +748,13 @@ def f_o(x):
     return a
 
 
-def nge(l1):
+def nge(l1):  # Velocity Dispertion of the extraordinary refrative index
         D = sym.diff(f_e(x,a_c))
         a = f_e(x,a_c)-l1*1E-9*(D)
         a = a.subs(x,l1)
         return a
 
-def ngo(l1):
+def ngo(l1):  # Velocity Dispertion of the ordinary refrative index
         D = sym.diff(f_o(x))
         a = f_o(x)-l1*1E-9*(D)
         a = a.subs(x,l1)
@@ -755,8 +767,6 @@ ng_o = ngo(l1)
 
 
 Dng= abs(ng_e-ng_o)
-band = 1E-9
-band =  c / (band)
 
 def I(v,t):
     s = mt.sin((Dng*L/(c*2))*v)
@@ -827,7 +837,7 @@ for a in range(len(G2)):
     if abs(G2_fwhm-G2[a])<np.min(G2)/1000:
         i_.append(a)
 
-fwhm = tau[i_[1]]-tau[i_[0]]
+fwhm = tau[i_[1]]-tau[i_[0]] # Full width at Half Maximum 
 
 
 print('\n')
@@ -835,8 +845,8 @@ print('the value of the FWHM is:', fwhm)
 
 
 
-
-
+#%%
+""" Photon Counting Rate"""
 
 n_e = neff(l1, a_c)
 n_o = Sell(l1,*sello)
@@ -847,28 +857,28 @@ else:
     n_1 = n_e
     
 wp = 2*mt.pi*c/  (lp*1E-9*n_p)
-"sinc function"
+
 f= float(wp/2)
+
 w1 = 2*mt.pi*c/  (l1*1E-9*n_1)
+
 Dng = float(Dng)
 
-Io = lambda h : (w1+h)*(wp-(w1+h))*np.sin((w1+h-wp/2)*(Dng*L/(c*2)))**2/((w1+h-wp/2)*(Dng*L/(c*2)))**2
+Io = lambda h : (w1+h)*(wp-(w1+h))*np.sin((w1+h-wp/2)*(Dng*L/(c*2)))**2/((w1+h-wp/2)*(Dng*L/(c*2)))**2 # Intengral part of the Counting rate
 Io1 = quad(Io, -f, f+10)
-error = Io1[1]
-Io1 = Io1[0]
+error = Io1[1] # Error of the numerical intergration
+Io1 = Io1[0] # Value of the ingreation
 
-""" value of the review"""
-deff_m = deff_m*1E-12*2
+deff_m = deff_m*1E-12*2 # Transform deff to Chi 2
 
-eo = 8.8541878176E-12
-P = 1E-3
 
-Ep2 = P/(c*eo*mt.pi*n_1*sigma_p**2)
+
+Ep2 = P/(c*eo*mt.pi*n_1*sigma_p**2) 
 R1 = Ep2*(deff_m**2)*L*L/(2*mt.pi*c*c)
 R2 = ng_e*ng_o/(n_1**4)
 R3 = (abs(sigma_p**2/(sigma_1**2 + 2*sigma_p**2)))**2
 
-Rsm = float(R1*R2*R3*Io1)
+Rsm = float(R1*R2*R3*Io1) # Photon Counting Rate
 
 print("Dng:")
 print(Dng)
