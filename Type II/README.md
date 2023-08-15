@@ -7,7 +7,7 @@ to calculate the value of the optical axis angle that ensure a collinear non-deg
 
 As an output we get the following images:
 
-$d_{deff}$ v/s azimuthal angle
+$d_{eff}$ v/s azimuthal angle
 
 <img src="MOFTIL_deff.png" width="400">
 
