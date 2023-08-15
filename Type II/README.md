@@ -7,9 +7,8 @@ to calculate the value of the optical axis angle that ensure a collinear non-deg
 
 As an output we get the following images:
 
-$d_{eff}$ v/s azimuthal angle
 
-<img src="MOFTIL_deff.png" width="300">
+<img src="MOFTIL_deff.png" width="400">
 
 
 $G^{(2)}$ as a function of the characteristic time
