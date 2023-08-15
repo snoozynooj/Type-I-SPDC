@@ -11,6 +11,7 @@ $d_{eff}$ v/s azimuthal angle
 
 <img src="MOFTIL_deff.png" width="400">
 
-$G^{(2)}$ as a function of the caracteristic time
+
+$G^{(2)}$ as a function of the characteristic time
 
 <img src="MOFTIL_G2.png" width="400">
