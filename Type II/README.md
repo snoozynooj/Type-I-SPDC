@@ -2,7 +2,6 @@
 Different Script are for differents type of crystals and wevalenghts
 ## **Type-II_uniaxial** 
 This file use a sellmeier equation given by the following equation
-
 $n^{2}(\lambda) = A + \frac{B_1\lambda^{2}}{\lambda^{2}-C_1} + \frac{B_2\lambda^{2}}{\lambda^{2}-C_2}$
 
 
