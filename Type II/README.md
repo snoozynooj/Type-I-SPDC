@@ -1,15 +1,10 @@
 # Type-II-SPDC
 Different Script are for differents type of crystals and wevalenghts
-## **Phase-Matching + G2 + Photon-Count** 
-This folder is all about producing phase-matching angles, $G^{(2)}$ and photon count. There is a file called the ***database*** which has information about all the crystals used in this study. 
+## **Type-II_uniaxial** 
+This file use a sellmeier equation given by the following equation
 
-Description of database file: 
-- Column 1: Name of crystals
-- Column 2: Type of crystal
-- Column 3: Band gap of the crystal
-- Column 4: Signal wavelength for SPDC
+$n^{2}(\lambda) = A + \frac{B_1\lambda^{2}}{\lambda^{2}-C_1} + \frac{B_2\lambda^{2}}{\lambda^{2}-C_2}$
 
-After you run deff.sh file, it will produce three files corresponding to the crystal. For example, if the crystal name is RATDAS01, it will produce the following files.
 
 **1: RATDAS01-Count.txt**
 
