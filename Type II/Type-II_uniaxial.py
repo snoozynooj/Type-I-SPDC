@@ -711,9 +711,8 @@ for a in range(len(phi_)):
     deff.append(d_eff(phi_[a]*mt.pi/180,a_c))
     
 plt.plot(phi_,deff,"-")    
-# np.savetxt('Deff_phi'+name+'.txt', phi_)
-# np.savetxt('Deff_deff'+name+'.txt', deff)
-
+plt.xlabel('$\phi$')
+plt.ylabel('$d_{eff}$')
 plt.show()    
 
 i = np.argmax(np.abs(deff)) 
@@ -802,24 +801,20 @@ for a in range(len(tau)):
     I1 = quad(I,-vo+1,vo,args = (tau[a]))[0]
     I2 = quad(Ii,-vo+1,vo,args = (tau[a]))[0]
     i_t = np.sqrt(I1.real**2+I2.real**2)**2
-    # i_t = np.sqrt(i_t**2)
+
     G2.append(i_t)
 
 f_max = np.max(G2)
 
-# vmax= np.array(1.835563942397468E+26)
-# G2 = G2/vmax
 tau = tau*Dng*L/(c*4)
 plt.plot(tau,G2,"-")
 plt.xlabel('t / $t_c$')
 plt.ylabel('$G^{(2)}$')
 plt.show()
 
-np.savetxt('G2_t_'+name+'.txt', tau)
-np.savetxt('G2_'+name+'.txt', G2)
 
 
-# G2 = G2*vmax
+
 f_max = np.max(G2)
 
 f_2 = f_max/2
@@ -832,7 +827,7 @@ num = []
 i = np.argmin(np.abs(G2-f_2))
 G2_fwhm= G2[i]
 i_=[]
-# tau = tau*Dng*L/(c*4)
+
 for a in range(len(G2)):
     if abs(G2_fwhm-G2[a])<np.min(G2)/1000:
         i_.append(a)
