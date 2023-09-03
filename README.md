@@ -8,11 +8,10 @@ The system is collinear if the photons have the same propagation direction as th
   <img src="Sample_images/spdc.png" width="600">
 </p>
 
-<img align="center" src="Sample_images/spdc.png" width="600">
 # Type-I-SPDC
-Different folders are for calculating different things.
+
 ## **Phase-Matching + G2 + Photon-Count** 
-This folder is all about producing phase-matching angles, $G^{(2)}$ and photon count. There is a file called the ***database*** which has information about all the crystals used in this study. 
+This folder is all about calculating phase-matching angles, $G^{(2)}$ and pair brightness (Number of entangled photon pairs. There is a file called the ***database*** which has information about all the crystals used in our study. 
 
 Description of database file: 
 - Column 1: Name of crystals
