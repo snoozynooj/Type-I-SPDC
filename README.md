@@ -4,6 +4,10 @@ pump (p) interacts with a nonlinear crystal and, as a result of the interaction,
 The SPDC process can be divided into types degeneracy and direction. In type-I SPDC, the generated photons have the same polarization while in type-II, the output photons have orthogonal polarization.
 The system is collinear if the photons have the same propagation direction as the pump and non-collinear if they propagate in different directions.
 
+<p align="center">
+  <img width="460" height="300" src="Sample_images/spdc.png">
+</p>
+
 <img align="center" src="Sample_images/spdc.png" width="600">
 # Type-I-SPDC
 Different folders are for calculating different things.
