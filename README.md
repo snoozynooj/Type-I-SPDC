@@ -5,7 +5,7 @@ The SPDC process can be divided into types degeneracy and direction. In type-I S
 The system is collinear if the photons have the same propagation direction as the pump and non-collinear if they propagate in different directions.
 
 <p align="center">
-  <img width="460" height="300" src="Sample_images/spdc.png">
+  <img width="600"  src="Sample_images/spdc.png">
 </p>
 
 <img align="center" src="Sample_images/spdc.png" width="600">
