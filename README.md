@@ -43,5 +43,5 @@ Correlation time: 1.1659736362620345e-14 s
 
 **3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is $\tau$ $(s)$ and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
 
-
+## **Test-Case** 
 
