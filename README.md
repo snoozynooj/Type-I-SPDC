@@ -30,6 +30,7 @@ Description of database file:
 - Column 4: Signal wavelength for SPDC
 
 After you run deff.sh file, it will produce three files corresponding to the crystal. For example, if the crystal name is RATDAS01, it will produce the following files.
+The signal wavelength used in the calculation is 1064 nm
 
 **1: RATDAS01-Count.txt**
 
@@ -48,4 +49,10 @@ Correlation time: 1.1659736362620345e-14 s
 **2: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and $d_{eff}$ at those angles. Column 1, Column 2, and Column 3 represent $d_{eff}$, $\theta$, and $\phi$. 
 
 **3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is $\tau$ $(s)$ and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
+
+## **Phase matching angles for different signal wavelength** 
+BiBO is used a case study. Figure below shows how phase-matching angles ($\theta$, and $\phi$) changes as function of signal wavlength on 2D-$d_{eff}$ map at 810 nm.
+<p align="center">
+  <img src="Sample_images/2dmap-BiBO-different wavlength.png" width="600">
+</p>
 
