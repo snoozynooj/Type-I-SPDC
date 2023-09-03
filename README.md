@@ -9,6 +9,10 @@ The system is collinear if the photons have the same propagation direction as th
 </p>
 
 # Type-I-SPDC
+**Flowchart for calculating $d_{eff}$ of any given crystal**
+<p align="center">
+  <img src="Sample_images/Method.png" width="600">
+</p>
 
 ## **Phase-Matching + G2 + Photon-Count** 
 This folder is all about calculating phase-matching angles, $G^{(2)}$ and pair brightness (Number of entangled photon pairs. There is a file called the ***database*** which has information about all the crystals used in our study. 
