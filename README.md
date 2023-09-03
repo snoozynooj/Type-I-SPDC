@@ -11,7 +11,7 @@ The system is collinear if the photons have the same propagation direction as th
 # Type-I-SPDC
 **Flowchart for calculating $d_{eff}$ of any given crystal**
 <p align="center">
-  <img src="Sample_images/Method.png" width="600">
+  <img src="Sample_images/Method.png" width="800">
 </p>
 
 ## **Phase-Matching + G2 + Photon-Count** 
