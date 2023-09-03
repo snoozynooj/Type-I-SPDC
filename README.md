@@ -14,6 +14,12 @@ The system is collinear if the photons have the same propagation direction as th
   <img src="Sample_images/Method.png" width="800">
 </p>
 
+## **Test-Case** 
+This folder is all about benchmarking our method for phase-matching angles calculation and $d_{eff}$
+<p align="center">
+  <img src="Sample_images/BiBoKTP.png" width="800">
+</p>
+
 ## **Phase-Matching + G2 + Photon-Count** 
 This folder is all about calculating phase-matching angles, $G^{(2)}$ and pair brightness (Number of entangled photon pairs. There is a file called the ***database*** which has information about all the crystals used in our study. 
 
@@ -42,10 +48,4 @@ Correlation time: 1.1659736362620345e-14 s
 **2: RATDAS01-phasematching-deff.csv** - This file has all the possible phase-matching angles and $d_{eff}$ at those angles. Column 1, Column 2, and Column 3 represent $d_{eff}$, $\theta$, and $\phi$. 
 
 **3: RATDAS01-G2.csv** - This file can be used to plot $G^{(2)}$. Column 1 is $\tau$ $(s)$ and Column 2 is $G^{(2)}$ ($\tau / \tau_o$)
-
-## **Test-Case** 
-This folder is all about benchmarking our method for phase-matching angles calculation and $d_{eff}$
-<p align="center">
-  <img src="Sample_images/BiBoKTP.png" width="800">
-</p>
 
