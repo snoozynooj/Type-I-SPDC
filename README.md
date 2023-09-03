@@ -45,5 +45,7 @@ Correlation time: 1.1659736362620345e-14 s
 
 ## **Test-Case** 
 This folder is all about benchmarking our method for phase-matching angles calculation and $d_{eff}$
-
+<p align="center">
+  <img src="Sample_images/BiBoKTP.png" width="800">
+</p>
 
