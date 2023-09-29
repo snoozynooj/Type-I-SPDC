@@ -56,3 +56,6 @@ BiBO is used a case study. Figure below shows how phase-matching angles ($\theta
   <img src="Sample_images/2dmap-BiBO-different wavlength.png" width="600">
 </p>
 
+## **Authors**
+Sanoj
+Simon Paiva
