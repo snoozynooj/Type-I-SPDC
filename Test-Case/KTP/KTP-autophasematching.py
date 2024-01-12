@@ -394,13 +394,13 @@ def f2 (x,theta,phi):
 
 def ng1(l1,theta_m,phi_m):
     D = sym.diff(f1(x,theta_m,phi_m))
-    a = f1(x,theta_m,phi_m)-l1*1E-3*(D)
+    a = f1(x,theta_m,phi_m)-l1*1*(D)
     a = a.subs(x,l1)
     return a
 
 def ng2(l1,theta_m,phi_m):
     D = sym.diff(f2(x,theta_m,phi_m))
-    a = f2(x,theta_m,phi_m)-l1*1E-3*(D)
+    a = f2(x,theta_m,phi_m)-l1*1*(D)
     a = a.subs(x,l1)
     return a
 
