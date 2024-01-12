@@ -336,13 +336,13 @@ print("theta_c:",theta_c*180/np.pi,"phi_c:",phiopt,"d_eff:",deff_m)
 
 def ngo(l1):
     D = sym.diff(Sell2(x,*nx))
-    a = Sell2(x,*nx)-l1*1E-9*(D)
+    a = Sell2(x,*nx)-l1*1*(D)
     a = a.subs(x,l1)
     return a
 
 def nge(l1):
     D = sym.diff(Sell2(x,*nz))
-    a = Sell2(x,*nz)-l1*1E-9*(D)
+    a = Sell2(x,*nz)-l1*1*(D)
     a = a.subs(x,l1)
     return a
 def vgdo(l1):
