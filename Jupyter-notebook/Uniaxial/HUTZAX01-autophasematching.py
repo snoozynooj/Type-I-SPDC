@@ -1,10 +1,3 @@
-
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May  2 12:08:47 2023
-
-@author: burto
-"""
 import numpy as np
 import math as mt
 import sympy as sym
