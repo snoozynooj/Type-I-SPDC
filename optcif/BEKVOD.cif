@@ -1,0 +1,73 @@
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a    20.7839449734
+_cell_length_b    20.7839449734
+_cell_length_c    11.3876320742
+_cell_angle_alpha 90.0000000000
+_cell_angle_beta  90.0000000000
+_cell_angle_gamma 120.0000000000
+_cell_volume      4260.1022836839
+
+_symmetry_space_group_name_H-M "R 3 c (hexagonal axes)"
+_symmetry_Int_Tables_number 161
+_space_group.reference_setting '161:R 3 -2"c'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 -y,x-y,z
+3 -x+y,-x,z
+4 -y,-x,z+1/2
+5 x,x-y,z+1/2
+6 -x+y,y,z+1/2
+7 x+1/3,y+2/3,z+2/3
+8 -y+1/3,x-y+2/3,z+2/3
+9 -x+y+1/3,-x+2/3,z+2/3
+10 -y+1/3,-x+2/3,z+1/6
+11 x+1/3,x-y+2/3,z+1/6
+12 -x+y+1/3,y+2/3,z+1/6
+13 x+2/3,y+1/3,z+1/3
+14 -y+2/3,x-y+1/3,z+1/3
+15 -x+y+2/3,-x+1/3,z+1/3
+16 -y+2/3,-x+1/3,z+5/6
+17 x+2/3,x-y+1/3,z+5/6
+18 -x+y+2/3,y+1/3,z+5/6
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+H1  H   18 b 0.89998  0.84180  0.25093 1.00000 Dx,Dy,Dz 
+H2  H   18 b 0.16213  -0.09057 0.25674 1.00000 Dx,Dy,Dz 
+H3  H   18 b -0.02812 0.86370  0.06448 1.00000 Dx,Dy,Dz 
+H4  H   18 b 0.24475  0.26835  0.24337 1.00000 Dx,Dy,Dz 
+H5  H   18 b 0.51143  0.44735  0.25327 1.00000 Dx,Dy,Dz 
+H6  H   18 b 0.29452  0.40484  0.19917 1.00000 Dx,Dy,Dz 
+C1  C   18 b -0.04181 0.85640  0.25281 1.00000 Dx,Dy,Dz 
+C2  C   18 b 0.32562  0.52453  0.03045 1.00000 Dx,Dy,Dz 
+C3  C   18 b 0.10333  0.89353  0.25546 1.00000 Dx,Dy,Dz 
+C4  C   18 b -0.00243 0.86908  0.15045 1.00000 Dx,Dy,Dz 
+C5  C   18 b 0.30385  0.30853  0.24727 1.00000 Dx,Dy,Dz 
+C6  C   18 b 0.35582  0.28523  0.27669 1.00000 Dx,Dy,Dz 
+C7  C   18 b 0.45171  0.40734  0.25284 1.00000 Dx,Dy,Dz 
+C8  C   18 b 0.33058  0.38249  0.22291 1.00000 Dx,Dy,Dz 
+N1  N   18 b 0.40162  0.54699  0.02520 1.00000 Dx,Dy,Dz 
+N2  N   18 b 0.07119  0.88701  0.15062 1.00000 Dx,Dy,Dz 
+N3  N   18 b 0.43029  0.33689  0.27776 1.00000 Dx,Dy,Dz 
+N4  N   18 b 0.40510  0.43325  0.22558 1.00000 Dx,Dy,Dz 
+O1  O   18 b 0.29372  0.50619  0.12849 1.00000 Dx,Dy,Dz 
+O2  O   18 b 0.33664  0.21754  0.30209 1.00000 Dx,Dy,Dz 
+Zn1 Zn  18 b 0.44746  0.54057  0.17441 1.00000 Dx,Dy,Dz 
+
+# end of cif

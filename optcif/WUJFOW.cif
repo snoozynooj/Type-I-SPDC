@@ -1,0 +1,64 @@
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a    7.9890678000
+_cell_length_b    7.9890678000
+_cell_length_c    27.2164919000
+_cell_angle_alpha 90.0000000000
+_cell_angle_beta  90.0000000000
+_cell_angle_gamma 120.0000000000
+_cell_volume      1504.3711321368
+
+_symmetry_space_group_name_H-M "P 61"
+_symmetry_Int_Tables_number 169
+_space_group.reference_setting '169:P 61'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 x-y,x,z+1/6
+3 -y,x-y,z+1/3
+4 -x,-y,z+1/2
+5 -x+y,-x,z+2/3
+6 y,-x+y,z+5/6
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+H1  H    6 a 0.58512  0.17634  0.14407 1.00000 Dx,Dy,Dz 
+H2  H    6 a 0.42523  0.01881  0.24289 1.00000 Dx,Dy,Dz 
+H3  H    6 a 0.68185  0.15735  0.23388 1.00000 Dx,Dy,Dz 
+H4  H    6 a 0.22007  0.08463  0.19710 1.00000 Dx,Dy,Dz 
+H5  H    6 a 0.25066  -0.08007 0.15929 1.00000 Dx,Dy,Dz 
+H6  H    6 a 0.52636  0.38837  0.22544 1.00000 Dx,Dy,Dz 
+H7  H    6 a 0.54643  0.45246  0.16201 1.00000 Dx,Dy,Dz 
+C1  C    6 a 0.54252  0.06291  0.21593 1.00000 Dx,Dy,Dz 
+C2  C    6 a 0.29578  0.07312  0.16456 1.00000 Dx,Dy,Dz 
+C3  C    6 a 0.59021  0.38255  0.19018 1.00000 Dx,Dy,Dz 
+C4  C    6 a 0.81084  0.48622  0.19242 1.00000 Dx,Dy,Dz 
+N1  N    6 a 0.50919  0.17412  0.17581 1.00000 Dx,Dy,Dz 
+O1  O    6 a 0.73868  -0.06398 0.16165 1.00000 Dx,Dy,Dz 
+O2  O    6 a 0.36695  0.73193  0.16219 1.00000 Dx,Dy,Dz 
+O3  O    6 a 0.57038  0.74958  0.23901 1.00000 Dx,Dy,Dz 
+O4  O    6 a 0.04442  -0.01633 0.09079 1.00000 Dx,Dy,Dz 
+O5  O    6 a 0.20958  0.33404  0.12265 1.00000 Dx,Dy,Dz 
+O6  O    6 a 0.40643  0.21225  0.07515 1.00000 Dx,Dy,Dz 
+O7  O    6 a 0.88954  0.41013  0.16697 1.00000 Dx,Dy,Dz 
+O8  O    6 a -0.09629 0.63940  0.21742 1.00000 Dx,Dy,Dz 
+P1  P    6 a 0.55308  0.85309  0.19284 1.00000 Dx,Dy,Dz 
+P2  P    6 a 0.23359  0.15915  0.10964 1.00000 Dx,Dy,Dz 
+Zn1 Zn   6 a 0.79491  -0.03019 0.09202 1.00000 Dx,Dy,Dz 
+Zn2 Zn   6 a 0.16077  0.46870  0.17551 1.00000 Dx,Dy,Dz 
+
+# end of cif

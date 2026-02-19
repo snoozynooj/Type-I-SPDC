@@ -1,0 +1,96 @@
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a    13.0443164000
+_cell_length_b    13.0443164000
+_cell_length_c    29.8699423000
+_cell_angle_alpha 90.0000000000
+_cell_angle_beta  90.0000000000
+_cell_angle_gamma 120.0000000000
+_cell_volume      4401.5705187006
+
+_symmetry_space_group_name_H-M "P 32 2 1"
+_symmetry_Int_Tables_number 154
+_space_group.reference_setting '154:P 32 2"'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 -y,x-y,z+2/3
+3 -x+y,-x,z+1/3
+4 x-y,-y,-z+1/3
+5 y,x,-z
+6 -x,-x+y,-z+2/3
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+H1  H    6 c 0.73120  0.74209  0.66109  1.00000 Dx,Dy,Dz 
+H2  H    6 c -0.09714 0.48643  0.55457  1.00000 Dx,Dy,Dz 
+H3  H    6 c 0.11262  0.48400  0.44326  1.00000 Dx,Dy,Dz 
+H4  H    6 c 0.25544  0.47156  0.49667  1.00000 Dx,Dy,Dz 
+H5  H    6 c 0.86089  0.26648  0.48914  1.00000 Dx,Dy,Dz 
+H6  H    6 c 0.75967  0.09196  0.43790  1.00000 Dx,Dy,Dz 
+H7  H    6 c 0.74544  0.31453  0.33457  1.00000 Dx,Dy,Dz 
+H8  H    6 c 0.84621  0.49097  0.38583  1.00000 Dx,Dy,Dz 
+H9  H    6 c 0.89856  -0.07564 0.69663  1.00000 Dx,Dy,Dz 
+H10 H    6 c 0.64451  -0.01691 0.76816  1.00000 Dx,Dy,Dz 
+H11 H    6 c 0.47946  0.79662  0.73533  1.00000 Dx,Dy,Dz 
+H12 H    6 c 0.83266  -0.01530 0.83330  1.00000 Dx,Dy,Dz 
+H13 H    6 c 0.82485  0.09905  0.89984  1.00000 Dx,Dy,Dz 
+H14 H    6 c 0.86668  0.38021  0.81208  1.00000 Dx,Dy,Dz 
+H15 H    6 c 0.87387  0.26552  0.74563  1.00000 Dx,Dy,Dz 
+H16 H    6 c 0.04430  0.46946  0.60784  1.00000 Dx,Dy,Dz 
+C1  C    6 c 0.49814  0.64875  0.67746  1.00000 Dx,Dy,Dz 
+C2  C    6 c 0.83250  0.13359  0.86594  1.00000 Dx,Dy,Dz 
+C3  C    6 c 0.84499  0.24636  0.85992  1.00000 Dx,Dy,Dz 
+C4  C    6 c 0.85625  0.29238  0.81647  1.00000 Dx,Dy,Dz 
+C5  C    6 c 0.86075  0.22933  0.77949  1.00000 Dx,Dy,Dz 
+C6  C    6 c 0.86618  0.32352  0.89946  1.00000 Dx,Dy,Dz 
+C7  C    6 c 0.23231  0.44940  0.58754  1.00000 Dx,Dy,Dz 
+C8  C    6 c 0.15565  0.46695  0.55538  1.00000 Dx,Dy,Dz 
+C9  C    6 c 0.05820  0.47370  0.57174  1.00000 Dx,Dy,Dz 
+C10 C    6 c -0.01977 0.48344  0.54247  1.00000 Dx,Dy,Dz 
+C11 C    6 c 0.00067  0.48478  0.49654  1.00000 Dx,Dy,Dz 
+C12 C    6 c 0.59570  0.76000  0.69568  1.00000 Dx,Dy,Dz 
+C13 C    6 c 0.09987  0.48265  0.47947  1.00000 Dx,Dy,Dz 
+C14 C    6 c 0.17804  0.47441  0.50906  1.00000 Dx,Dy,Dz 
+C15 C    6 c 0.86149  0.38844  0.43966  1.00000 Dx,Dy,Dz 
+C16 C    6 c 0.83663  0.27654  0.45510  1.00000 Dx,Dy,Dz 
+C17 C    6 c 0.78124  0.17991  0.42653  1.00000 Dx,Dy,Dz 
+C18 C    6 c 0.75091  0.19363  0.38266  1.00000 Dx,Dy,Dz 
+C19 C    6 c 0.77246  0.30549  0.36827  1.00000 Dx,Dy,Dz 
+C20 C    6 c 0.82736  0.40326  0.39667  1.00000 Dx,Dy,Dz 
+C21 C    6 c 0.69214  0.08938  0.35284  1.00000 Dx,Dy,Dz 
+C22 C    6 c 0.71380  0.79596  0.68443  1.00000 Dx,Dy,Dz 
+C23 C    6 c 0.80628  0.89652  0.70393  1.00000 Dx,Dy,Dz 
+C24 C    6 c 0.78032  -0.03643 0.73384  1.00000 Dx,Dy,Dz 
+C25 C    6 c 0.66298  -0.07064 0.74518  1.00000 Dx,Dy,Dz 
+C26 C    6 c 0.57142  0.82675  0.72638  1.00000 Dx,Dy,Dz 
+C27 C    6 c 0.85479  0.12060  0.78651  1.00000 Dx,Dy,Dz 
+C28 C    6 c 0.83742  0.07025  0.82923  1.00000 Dx,Dy,Dz 
+O1  O    6 c 0.52108  0.60135  0.64432  1.00000 Dx,Dy,Dz 
+O2  O    6 c 0.67061  0.10627  0.31251  1.00000 Dx,Dy,Dz 
+O3  O    6 c 0.39686  0.60552  0.69681  1.00000 Dx,Dy,Dz 
+O4  O    6 c 0.87465  0.06527  0.75039  1.00000 Dx,Dy,Dz 
+O5  O    6 c -0.09033 0.43468  0.89203  1.00000 Dx,Dy,Dz 
+O6  O    6 c 0.85289  0.28223  -0.06074 1.00000 Dx,Dy,Dz 
+O7  O    6 c 0.32631  0.45358  0.57257  1.00000 Dx,Dy,Dz 
+O8  O    6 c 0.19687  0.42919  0.62825  1.00000 Dx,Dy,Dz 
+O9  O    6 c -0.08081 0.48683  0.46690  1.00000 Dx,Dy,Dz 
+O10 O    6 c 0.66587  -0.01172 0.36959  1.00000 Dx,Dy,Dz 
+Zn1 Zn   6 c 0.45582  0.45748  0.60710  1.00000 Dx,Dy,Dz 
+Zn2 Zn   6 c 0.26904  0.44421  0.68609  1.00000 Dx,Dy,Dz 
+
+# end of cif
